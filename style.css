@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+  }
+
+header {
+    background-color: #e3e6f3;
+    padding: 20px 80px;
+    display: flex;
+    height: 10vh;
+    position: sticky;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    display: inline;
+}
+
+header ul li a {
+    color: black;
+    font-family: "League Spartan", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #088178;
+    text-decoration: underline;
+    text-decoration-color: #088178;
+}
+
+main {
+    width: 100%;
+}
+
+#hero {
+    background-image: url(images/hero4.png);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 80px;
+}
+
+#hero h4 {
+    padding-bottom: 15px;
+    font-size: 4vw;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 6vw;
+
+}
+
+#hero h1 {
+    color: #088178;
+    font-size: 5vw;
+}
+
+#hero p {
+    margin-top: 5px;
+    color: #465b52; 
+}
+
+#hero button {
+    background-color: transparent;
+    background-image: url(images/button.png);
+    background-size: cover;
+    width:  30vh;
+    height: fit-content;
+    padding: 15px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+    font-size: large;
+    color: #088178;
+    border: 0;
+    cursor: pointer;
+}
+
+.cards {
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    display: inline-block;
+    border: 1px solid green;
+    padding: 20px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.card:hover {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    animation: cardanimation 0.4s forwards;
+}
+
+@keyframes cardanimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.card h6 {
+    margin-top: 10px;
+    font-size: medium;
+    padding: 3px;
+    color: #088178;
+}
+
+.card:nth-child(1) h6 {
+    background-color: #fddde4;
+}
+
+.card:nth-child(2) h6 {
+    background-color: #cdebbc;
+}
+
+.card:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+
+.card:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+
+.card:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+
+.card:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+.content .desc{
+    text-align: center;
+}
+
+.content {
+    margin-top: 30px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product {
+    border: 1px solid grey;
+    border-radius: 20px 20px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product:hover {
+    animation: productanimation 0.2s forwards;
+}
+
+@keyframes productanimation {
+    0%   {scale: 1;}
+    100% {
+        transform: scale(1.10); 
+        box-shadow: 0 15px 20px rgba(0,0,0,.19)
+    }
+}
+
+.product img{
+    width: 250px
+}
+
+.product .bot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product .fa-star {
+    color: rgb(217, 217, 51);
+}
+
+.product .fa-cart-shopping {
+    border: 10px solid #1bb4aa;
+    background-color: #1bb4aa;
+    border-radius: 50%;
+}
+
+.product .fa-cart-shopping:hover {
+    animation: shopanimation 0.5s forwards;
+}
+
+@keyframes  shopanimation {
+    0% {scale: 1;}
+    100% {scale: 1.5;}
+}
+
+.repaire {
+    margin-top: 50px;
+    background-image: url(images/banner/b2.jpg);
+    background-size: cover;
+    height: 350px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.repaire h1, .repaire h4 {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.repaire button {
+    align-self: center;
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.repaire button:hover {
+    animation: buttonanimation 0.5s forwards;
+}
+
+@keyframes buttonanimation {
+    0% {scale: 1;}
+    100% {scale: 1.2; box-shadow: 0 5 15 rgba(0, 0, 0, 0.06);}
+}
+
+.arrivals .desc h1, .arrivals .desc h6{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.panolar .ustpanolar .pano1 {
+    background-image: url(images/banner/b17.jpg);
+    background-repeat: no-repeat;
+    margin: 20px;
+    height: 300px;
+    background-size: cover;
+    width: 575px;
+}
+
+.panolar .ustpanolar .pano2 {
+    background-image: url(images/banner/b10.jpg);
+    width: 575px;
+    height: 300px;
+    background-size: cover;
+    margin: 20px;
+}
+
+
+.panolar .ustpanolar {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.panolar .ustpanolar h6:first-child {
+    margin-top: 40px;
+}
+
+.yazi {
+    margin-left: 30px;
+    color: white;
+}
+
+.yazi h2 {
+    margin: 10px 0px;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.yazi h6:first-child {
+    font-size: 15px;
+}
+
+.yazi button {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    color: white;
+}
+
+.yazi button:hover {
+    animation: xanimation 0.7s forwards;
+}
+
+@keyframes xanimation {
+    0% {
+        background: none; 
+    }
+    100% {
+        background-color: #088178;
+    }
+}
+
+
+.panolar .altpanolar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.panolar .altpanolar .pano1 {
+    background-image: url(images/banner/b7.jpg);
+    background-size: cover;
+    width: 370px;
+    margin: 20px;
+    height: 200px;
+}
+
+.panolar .altpanolar .pano2 {
+    background-image: url(images/banner/b4.jpg);
+    background-size: cover;
+    width: 370px;
+    height: 200px;
+    margin: 20px;
+
+}
+
+.panolar .altpanolar .pano3 {
+    background-image: url(images/banner/b18.jpg);
+    background-size: cover;
+    width: 370px;
+    height: 200px;
+    margin: 20px;
+}
+
+.altpanolar h6 {
+    margin-left: 10px;
+    color: rgb(161, 6, 6);
+}
+
+.altpanolar h1 {
+    margin-left: 10px;
+    margin-top: 80px;
+    color: white;
+    font-size: larger;
+}
+
+.newsletter {
+    background-color: #041e42;
+    background-image: url(images/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter .yazi {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.newsletter span {
+    color: #b1b925;
+}
+
+.email-container {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.email-container input {
+    height: 50px;
+    width: 300px;
+    border-radius: 2px;
+    border: 0;
+}
+
+
+.email-container button {
+    height: 50px;
+    width: 100px;
+    background: none;
+    border: 1px solid white;
+    color: white; 
+}
+
+.email-container button:hover {
+    animation: xxanimation 0.5s forwards;
+}
+
+@keyframes xxanimation {
+    0% { }
+    100% {background-color: white; color: black;}
+}
+footer {
+    background-color: #ececec; 
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.contact, .about, .myaccount, .install {
+    margin-top: 50px;
+}
+
+.about, .myaccount {
+    line-height: 30px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer p {
+    color: grey;
+}
+
+footer .fa-brands {
+    color: black;
+}
+
+.install strong{
+    color: black;
+    text-decoration: none;
+}
